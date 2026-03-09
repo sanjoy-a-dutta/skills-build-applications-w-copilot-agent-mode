@@ -1,88 +1,149 @@
+
 body {
-  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-  color: #2d2d2d;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f5f6fa;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  min-height: 100vh;
 }
 
 .App {
-  min-height: 100vh;
-  color: #2d2d2d;
+  text-align: center;
+  background: rgba(34, 40, 49, 0.95);
+  border-radius: 16px;
+  margin: 2rem auto;
+  padding: 2rem 1rem 1rem 1rem;
+  max-width: 900px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
 
-.card {
-  border-radius: 1rem;
-  background: #f7fbff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-
+/* Navigation Bar */
 .navbar {
-  border-radius: 0 0 1rem 1rem;
-  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+  background: linear-gradient(90deg, #00b4d8 0%, #0077b6 100%);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.navbar-logo {
+  height: 48px;
+  margin-right: 1rem;
+}
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
-.navbar-brand img {
-  height: 40px;
-  margin-right: 12px;
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.octofit-logo-small {
+  height: 48px;
+  margin-right: 1rem;
   vertical-align: middle;
 }
 
-.table {
-  background: #eaf6ff;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  color: #1a237e;
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-.table th {
-  background: #b3e5fc;
-  color: #01579b;
+
+.App-header {
+  background: transparent;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f5f6fa;
 }
 
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #f1f8e9;
-}
 
-.btn-primary {
-  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
-  border: none;
-  color: #fff;
+.App-link {
+  color: #48cae4;
+  text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s;
 }
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, #0056b3 0%, #00acc1 100%);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #007bff;
-  font-weight: 700;
-}
-
-a, .nav-link {
-  color: #00bcd4 !important;
-  font-weight: 500;
-}
-
-a:hover, .nav-link:hover {
-  color: #007bff !important;
+.App-link:hover {
+  color: #00b4d8;
   text-decoration: underline;
 }
 
-.navbar-nav .nav-link.active {
-  color: #fff !important;
-  background: #00bcd4;
-  border-radius: 0.5rem;
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Logo styling */
-.octofit-logo {
-  height: 40px;
-  margin-right: 10px;
-  vertical-align: middle;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00b4d8;
+  font-weight: 700;
+  margin-top: 1.5rem;
 }
 
-/* Favicon (for demonstration, actual favicon is set in public/index.html) */
-.favicon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #222831;
+  color: #f5f6fa;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #393e46;
+}
+th {
+  background: #00b4d8;
+  color: #fff;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #00b4d8 0%, #48cae4 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,180,216,0.12);
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #0077b6 0%, #00b4d8 100%);
+  color: #fff;
+}
+
+/* Misc */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #232526;
+}
+::-webkit-scrollbar-thumb {
+  background: #00b4d8;
+  border-radius: 4px;
 }
