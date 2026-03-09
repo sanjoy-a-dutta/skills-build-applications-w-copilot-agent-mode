@@ -1,29 +1,40 @@
 
+
 import logo from './logo.svg';
-import './App.css';
 
 
-function App() {
   return (
     <div className="App">
-      <nav className="navbar">
-        <img src={logo} className="octofit-logo-small navbar-logo" alt="OctoFit Logo" />
-        <span className="navbar-title">OctoFit Tracker</span>
+      <nav className="navbar navbar-expand-lg navbar-dark mb-4">
+        <div className="container-fluid">
+          <span className="navbar-brand fs-3">
+            <img src={logo} alt="OctoFit Logo" className="octofit-logo-small me-2" style={{height: '48px', marginRight: '1rem', verticalAlign: 'middle'}} />
+            OctoFit Tracker
+          </span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item"><Link className="nav-link" to="/activities">Activities</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/teams">Teams</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/users">Users</Link></li>
+              <li className="nav-item"><Link className="nav-link" to="/workouts">Workouts</Link></li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <header className="App-header">
-        <h1>Welcome to OctoFit Tracker</h1>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Routes>
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/workouts" element={<Workouts />} />
+          <Route path="/" element={<h1 className="display-4 my-4">Welcome to OctoFit Tracker</h1>} />
+        </Routes>
+      </div>
     </div>
   );
 }
