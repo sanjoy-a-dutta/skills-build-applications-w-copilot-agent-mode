@@ -1,11 +1,17 @@
 import React from 'react';
+
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import logo from '../assets/octofitapp-small.png';
+
 
 function Navigation() {
   return (
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">OctoFit Tracker</Navbar.Brand>
+        <Navbar.Brand href="#home" className="d-flex align-items-center">
+          <img src={logo} alt="OctoFit Logo" className="octofit-logo" />
+          OctoFit Tracker
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
